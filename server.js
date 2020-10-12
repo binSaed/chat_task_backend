@@ -14,6 +14,7 @@ const io = socketIO(server);
 
 let users = [];
 
+
 io.on('connection', socket => {
 
 	socket.on("user-in", (user) => {
@@ -45,6 +46,8 @@ io.on('connection', socket => {
 app.get('/', (req, res) => {
 	res.json({message: 'This is a message from the server to verify that is Abdelrahman Saed is the owner'})
 })
-server.listen('8081', () => {
+
+server.listen(process.env.PORT)
+server.listen(process.env.PORT, () => {
 	console.log("Listening on port 8081");
 });
