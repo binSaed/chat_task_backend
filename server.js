@@ -47,7 +47,7 @@ app.get('/', (req, res) => {
 	res.json({message: 'This is a message from the server to verify that is Abdelrahman Saed is the owner'})
 })
 
-server.listen(process.env.PORT)
+
 server.listen(process.env.PORT, () => {
 	console.log("Listening on port 8081");
 });
